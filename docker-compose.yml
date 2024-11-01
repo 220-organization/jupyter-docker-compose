@@ -4,6 +4,7 @@ services:
   jupyter:
     image: jupyter/minimal-notebook
     volumes:
+      - ../:/home/jovyan/220
       - .:/home/jovyan/work
       - ./configure_environment.sh:/usr/local/bin/before-notebook.d/configure_environment.sh
     ports:
